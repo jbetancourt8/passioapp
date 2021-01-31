@@ -5,7 +5,7 @@ This is a simple RN application that uses native module to detect logos.
 ## How to Install
 Clone the repo and run ```npm install```
 
-Open Xcode and make sure to add a development team. 
+Open Xcode and add a development team.
 
 If the following error occurs: 
 ```
