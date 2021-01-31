@@ -14,6 +14,6 @@ building for ios simulator but the linked framework
 
 In the build settings, under Build Options, set Validate Workspace to Yes. 
 
-##Todo 
+## Todo 
 Connect RN to the native module. 
 
