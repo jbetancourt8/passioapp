@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
 });
 
 function Home() {
-  console.log(NativeModules.PassioSDKRN.Logo);
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: '#131432'}}>
       <View style={styles.container}>
