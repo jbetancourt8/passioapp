@@ -1,6 +1,6 @@
-# passioapp
+# Passio App
 
-This is a simple RN application that uses native module to detect logos.
+This is a simple RN application that uses PassioSDK to detect logos.
 
 ## How to Install
 
@@ -30,9 +30,9 @@ pod deintegrate
 pod install
 ```
 
-## Todo
+## To Do
 
-Currently the application is not integrated with the Passio SDK. Will need to do further research into how to bridge Swift and React Native.
+Integrate SDK with RN app.
 
 ## Screenshots
 
