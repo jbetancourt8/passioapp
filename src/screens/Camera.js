@@ -1,5 +1,11 @@
 import React from 'react';
-import {StyleSheet, View, Text, SafeAreaView} from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Text,
+  SafeAreaView,
+  NativeModules,
+} from 'react-native';
 
 import {RNCamera} from 'react-native-camera';
 
@@ -24,6 +30,7 @@ const styles = StyleSheet.create({
 });
 
 function Home() {
+  console.log(NativeModules.PassioSDKRN.Logo);
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: '#131432'}}>
       <View style={styles.container}>
@@ -35,7 +42,7 @@ function Home() {
           captureAudio={false}
         />
         <View style={styles.logoContainer}>
-          <Text style={styles.logoText}>Logo</Text>
+          <Text style={styles.logoText}>{NativeModules.PassioSDKRN.Logo}</Text>
         </View>
       </View>
     </SafeAreaView>

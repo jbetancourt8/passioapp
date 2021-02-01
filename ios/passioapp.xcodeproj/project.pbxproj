@@ -14,6 +14,8 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2091DFFE25C7517300B17C5C /* PassioSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2091DFFD25C7517300B17C5C /* PassioSDK.framework */; };
 		2091DFFF25C7517300B17C5C /* PassioSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2091DFFD25C7517300B17C5C /* PassioSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2091E01D25C76E6800B17C5C /* PassioSDKRN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091E01C25C76E6800B17C5C /* PassioSDKRN.swift */; };
+		2091E02525C7735A00B17C5C /* PassioSDKRN.m in Sources */ = {isa = PBXBuildFile; fileRef = 2091E02425C7735A00B17C5C /* PassioSDKRN.m */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -68,6 +70,9 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = passioapp/main.m; sourceTree = "<group>"; };
 		1D849855F0085EDD8DB8AC62 /* libPods-passioapp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-passioapp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2091DFFD25C7517300B17C5C /* PassioSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PassioSDK.framework; sourceTree = "<group>"; };
+		2091E01B25C76E6800B17C5C /* passioapp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "passioapp-Bridging-Header.h"; sourceTree = "<group>"; };
+		2091E01C25C76E6800B17C5C /* PassioSDKRN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassioSDKRN.swift; sourceTree = "<group>"; };
+		2091E02425C7735A00B17C5C /* PassioSDKRN.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PassioSDKRN.m; sourceTree = "<group>"; };
 		29A74051277C9969B013640D /* Pods-passioapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-passioapp.debug.xcconfig"; path = "Target Support Files/Pods-passioapp/Pods-passioapp.debug.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* passioapp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "passioapp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* passioapp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "passioapp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +155,9 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				2091E01C25C76E6800B17C5C /* PassioSDKRN.swift */,
+				2091E01B25C76E6800B17C5C /* passioapp-Bridging-Header.h */,
+				2091E02425C7735A00B17C5C /* PassioSDKRN.m */,
 			);
 			name = passioapp;
 			sourceTree = "<group>";
@@ -314,7 +322,7 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = L2WH8QQ2ZN;
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1230;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -589,7 +597,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				2091E02525C7735A00B17C5C /* PassioSDKRN.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				2091E01D25C76E6800B17C5C /* PassioSDKRN.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,6 +640,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3280126075E84A83E5528D3F /* Pods-passioapp-passioappTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -653,6 +664,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F0890B591604B303B8CF51B0 /* Pods-passioapp-passioappTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = passioappTests/Info.plist;
@@ -692,6 +704,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.jaimebetancourt.passioapp;
 				PRODUCT_NAME = passioapp;
+				SWIFT_OBJC_BRIDGING_HEADER = "passioapp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VALIDATE_WORKSPACE = YES;
@@ -721,6 +734,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.jaimebetancourt.passioapp;
 				PRODUCT_NAME = passioapp;
+				SWIFT_OBJC_BRIDGING_HEADER = "passioapp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VALIDATE_WORKSPACE = YES;
 				VERSIONING_SYSTEM = "apple-generic";

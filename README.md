@@ -6,7 +6,7 @@ This is a simple RN application that uses native module to detect logos.
 
 Clone the repo and run `npm install`
 
-Open Xcode and add a development team.
+Open `passioapp.xcworkspace` located in the ios folder with Xcode and add a development team.
 
 If the following error occurs:
 
@@ -18,7 +18,7 @@ In the build settings, under Build Options, set Validate Workspace to Yes.
 
 ## Todo
 
-Connect RN to the native module.
+Currently the application is not integrated with the Passio SDK. Will need to do further research into how to bridge Swift and React Native.
 
 ## Screenshots
 
